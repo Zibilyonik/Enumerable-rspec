@@ -1,4 +1,4 @@
-require './enumerable'
+require './Enumerable'
 
 describe Enumerable do
   let(:array){[1,2,3,4]}
@@ -57,5 +57,5 @@ describe Enumerable do
     it "should loop through the array and perform arithmetic operations on all the elements" do
       expect(array.my_inject{|x, y| x+y}).to eq(10)
     end
-  end 
+  end
 end

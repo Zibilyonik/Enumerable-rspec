@@ -52,8 +52,8 @@ describe Enumerable do
 
   describe "#my_count" do
     it "should loop through the array and count the number of elements that match a condition" do
-      expect(array.my_count{ |x| x.even? }).to eq(2)
-      expect(array.my_count{ |x| x > 4 }).to eq(0)
+      expect(array.my_count { |x| x.even? }).to eq(2)
+      expect(array.my_count { |x| x > 4 }).to eq(0)
     end
   end
 

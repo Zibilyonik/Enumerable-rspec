@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 require './Enumerable'
 
 describe Enumerable do
-  let(:array){[1,2,3,4]}
+  let(:array) { [1, 2, 3, 4] }
   describe "#my_each" do
     it "should loop through an array by giving the elements in it" do
       new_array = []

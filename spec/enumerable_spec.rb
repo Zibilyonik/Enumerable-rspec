@@ -22,7 +22,7 @@ describe Enumerable do
 
   describe "#my_select" do
     it "should loop through the array by and return elements that pass a condition" do
-      new_array = array.my_select { |x| x.even? }
+      new_array = array.my_select(&:even?)
       expect(new_array).to eq([2, 4])
     end
   end
@@ -52,7 +52,7 @@ describe Enumerable do
 
   describe "#my_count" do
     it "should loop through the array and count the number of elements that match a condition" do
-      expect(array.my_count { |x| x.even? }).to eq(2)
+      expect(array.my_count(&:even?)).to eq(2)
       expect(array.my_count { |x| x > 4 }).to eq(0)
     end
   end

@@ -8,8 +8,7 @@ module Enumerable
       each do |e|
         yield(e)
       end
-    end
-    if is_a? Hash
+    else
       each do |k, v|
         yield(k, v)
       end
@@ -73,7 +72,8 @@ module Enumerable
     new_hash = {}
     my_each { |k, v| new_hash.update(proc.call(k, v)) }
     return new_array unless is_a? Hash
-    return new_hash
+
+    new_hash
   end
 
   def my_inject(accumulator = 0)

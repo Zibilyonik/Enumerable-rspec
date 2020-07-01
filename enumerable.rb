@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # module implements some enumerable methods of ruby
 # by adding my_ to the default method names
 module Enumerable
@@ -94,16 +92,16 @@ end
 array = [3, 1, 5, 6, 3, 6]
 
 # testing each method in enumerable module on array variable
-array.my_each { |n| print n }                          # 315636
+array.my_each { |n| print n } # 315636
 puts ''
-array.my_each_with_index { |n, i| puts "#{n} #{i}" }   # (3 0) (1 1) (5 2) (6 3) (3 4) (6 5)
+array.my_each_with_index { |n, i| puts "#{n} #{i}" } # (3 0) (1 1) (5 2) (6 3) (3 4) (6 5)
 array.my_select(&:even?) # [6, 6]
-array.my_all? { |n| n < 10 }                  # true
-array.my_any? { |n| n < 10 }                  # true
-array.my_none? { |n| n > 10 }                 # true
+array.my_all? { |n| n < 10 } # true
+array.my_any? { |n| n < 10 } # true
+array.my_none? { |n| n > 10 } # true
 array.my_count(6) # 2
 array.my_count { |n| n >= 3 } # 5
 array.my_count # 6
 proc = proc { |n| n * 2 }
-[3, 5, 4].my_map(&proc)                        # [6, 10, 8]
-multiply_els([2, 4, 5])                        # 40
+[3, 5, 4].my_map(&proc) # [6, 10, 8]
+multiply_els([2, 4, 5]) # 40

@@ -25,8 +25,14 @@ The **#inject** method implementation (**#my_inject**) has been tested with the 
   $ git clone https://github.com/sonegillis/ruby-enumeral-methods.git
 ```
 2. Navigate to the project directory
-```bash
-  $ cd ruby-enumeral-methods
+
+3. Use bundler to install the required rspec gem
+```
+  $ bundle install
+```
+4. Use the RSpec gem to check if all the tests pass.
+```
+  $ rspec
 ```
 ## Contributors
 [Mekolle Sone Gillis](https://github.com/sonegillis)

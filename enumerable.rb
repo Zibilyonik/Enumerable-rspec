@@ -65,13 +65,15 @@ module Enumerable
   end
 
   def my_map(&proc)
-    new_array = []
-    my_each { |n| new_array.push(proc.call(n)) }
-    new_hash = {}
-    my_each { |k, v| new_hash.update(proc.call(k, v)) }
-    return new_array unless is_a? Hash
-
-    new_hash
+    if is_a? Array
+      new_array = []
+      my_each { |n| new_array.push(proc.call(n)) }
+      new_array
+    elsif is_a? Hash
+      new_hash = {}
+      my_each { |k, v| new_hash.update(proc.call(k, v)) }
+      new_hash
+    end
   end
 
   def my_inject(accumulator = 0)

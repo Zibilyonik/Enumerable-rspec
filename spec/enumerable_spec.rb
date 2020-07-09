@@ -56,7 +56,7 @@ describe Enumerable do
   end
 
   describe '#my_map' do
-    it 'should loop through the array and determine if any element is true' do
+    it 'should loop through the array and transform every element with using the given block' do
       expect(array.my_map { |x| x * 2 }).to eq([2, 4, 6, 8])
     end
   end
